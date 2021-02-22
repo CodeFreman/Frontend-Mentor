@@ -9,19 +9,25 @@ html {
 }
 
 body {
-  background-image: url("/images/bg-pattern-top.svg");
-  background-repeat: no-repeat;
-  background-position-x: -30vh;
-  background-position-y: -25vw;
+  margin: 0 auto;
   background-color: hsl(185, 75%, 39%);
-  width: 1440px;
+  max-width: 1440px;
   height: 100vh;
+  overflow: hidden;
+}
+
+.top-img img {
+  position: absolute;
+  top: -500px;
+  left: -300px;
+  z-index: 1;
+  overflow: hidden
 }
 
 .svg-img img {
-  position: relative;
-  right: -30vw;
-  bottom: -10vh;
+  position: absolute;
+  right: -250px;
+  bottom: -600px;
 }
 
 #profile-card {
@@ -36,6 +42,10 @@ body {
   transform: translate(0, -50%);
   border-radius: 10px;
   z-index: 1;
+}
+
+#profile-card:hover {
+  transform: scale(0.5);
 }
 
 .profile-pic {
@@ -82,12 +92,24 @@ body {
   letter-spacing: 2px;
 }
 
+div .attribution {
+  margin: auto;
+}
+
 .attribution { 
+  position: fixed;
+  bottom: 10px;
   font-size: 11px; 
-  text-align: center;
+  color: #000000;
  }
 
 .attribution a { 
   color: hsl(228, 45%, 44%);
   text-decoration: none;
+}
+
+@media only screen and (min-width: 1440px) {
+  body {
+    width: 375px;
+  }
 }
